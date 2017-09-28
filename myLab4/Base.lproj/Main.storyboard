@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jZs-yt-JMM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="R36-dt-mZO">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="jZs-yt-JMM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="y0q-sD-v7i">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="F2F-bD-hZd" kind="relationship" relationship="viewControllers" id="1CY-SE-0G1"/>
+                        <segue destination="btM-pR-N15" kind="relationship" relationship="viewControllers" id="E1B-jE-8a8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P3E-bJ-EEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="307"/>
+        </scene>
+        <!--Movie Favorite-->
+        <scene sceneID="YgY-YB-hEW">
+            <objects>
+                <tableViewController id="btM-pR-N15" customClass="movieFavorite" customModule="myLab4" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="LKN-TD-KYx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wpw-Qi-aZW">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wpw-Qi-aZW" id="VNT-vg-mtK">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="btM-pR-N15" id="cdd-8l-KW6"/>
+                            <outlet property="delegate" destination="btM-pR-N15" id="7A0-VX-okm"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="11L-be-SFB"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v7h-xD-rgj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953" y="1064"/>
+        </scene>
+        <!--Movies-->
+        <scene sceneID="OJE-FK-Fi3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F2F-bD-hZd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Movies" image="1476404080_38.png" badgeValue="Movies" id="6VK-Xp-swn"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Wq-w8-LEs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="N75-5X-tIW" kind="relationship" relationship="rootViewController" id="SGn-pj-Kx9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fLq-tr-HBQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953" y="307"/>
+        </scene>
+        <!--Movie Search View Controller-->
+        <scene sceneID="kP0-WC-p5V">
+            <objects>
+                <viewController id="N75-5X-tIW" customClass="movieSearchViewController" customModule="myLab4" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XrV-gn-O0l"/>
+                        <viewControllerLayoutGuide type="bottom" id="fEG-GV-qEx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iBh-dC-eiP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="xmq-5Q-fdx">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xmq-5Q-fdx" firstAttribute="leading" secondItem="iBh-dC-eiP" secondAttribute="leading" id="YtX-nu-mvC"/>
+                            <constraint firstAttribute="trailing" secondItem="xmq-5Q-fdx" secondAttribute="trailing" id="b9X-DH-vYw"/>
+                            <constraint firstItem="xmq-5Q-fdx" firstAttribute="top" secondItem="XrV-gn-O0l" secondAttribute="bottom" id="vHn-Ds-JsM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="b8k-Oo-4Da">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="6x8-0I-4Na">
+                            <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="0.0" id="IAc-hg-0dr">
+                                <rect key="frame" x="18" y="7" width="133" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="yearChanged:" destination="N75-5X-tIW" eventType="valueChanged" id="Tcv-RZ-9TT"/>
+                                </connections>
+                            </slider>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="xmq-5Q-fdx" id="zOg-qq-Vau"/>
+                        <outlet property="sliderValue" destination="IAc-hg-0dr" id="7KR-UB-OXV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NbD-OU-EBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1850" y="307"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1476404080_38.png" width="32" height="32"/>
+    </resources>
+</document>
