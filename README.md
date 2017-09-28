@@ -5,3 +5,4 @@ Users can selected from multiple color options.<br/>
 Overriding the touchesBegan, touchesMoved, and touchesEnded functions: Takes the first touch from a set of UITouch objects provided by the system, and
 finds its location in the current view. <br/>
 Override the drawRect function of a custom UIView to implement custom drawing.<br/>
+<img src="1.png"/>
